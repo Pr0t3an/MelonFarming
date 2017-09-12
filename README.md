@@ -25,3 +25,4 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
       Usage
           
           pcapAlize -h <file>.pcap
+          (pretty much tshark -r <file>.pcap -T fields -e ip.src -e ip.dst | tr "\t" "\n" | sort | uniq
