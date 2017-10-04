@@ -26,3 +26,11 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
           
           pcapAlize -h <file>.pcap
           (pretty much tshark -r <file>.pcap -T fields -e ip.src -e ip.dst | tr "\t" "\n" | sort | uniq
+
+-----------------------------
+
+<b>whodat.py</b> Basic 2 Char (Alpha-2) country code to Country name lookup using pycountry
+
+      Requirements - pycountry (pip install pycountry)
+      
+      Usuage - whoday.py <2 letter code>
