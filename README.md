@@ -37,25 +37,25 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
       
 ----------------------------
 
-<b>yabs.py</b> YABS - Yet Another Bucket Scanner.  Scanning for S3 public buckets against a worklist.  Many exist but needed something that would be able to run huge word lists - so needed to use the ThreadPoolExecutor.  I had some things added (probably not deleted, to track progress...but wont be using it often enough so cat <file> | wc -l or Get-Content <file> | Measure-Object -Line  will do the trick.
+<b>yabs.py</b> YABS - Yet Another Bucket Scanner.  Scanning for S3 public buckets against a wordlist.  Many exist but needed something that would be able to run huge word lists - so needed to use the ThreadPoolExecutor.  I had some things added (probably not deleted, to track progress...but wont be using it often enough so cat <file> | wc -l or Get-Content <file> | Measure-Object -Line  will do the trick.
       
       Usuage - yabs.py -h 
       
       usage: yabs.py [-h] [-w scanlist] [-o outputfile] [-s] [-p]
                [-c concurrentthreads]
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -w scanlist, --scanlist scanlist
+      optional arguments:
+       -h, --help            show this help message and exit
+       -w scanlist, --scanlist scanlist
                         Text file containing domain safe list to scan
-  -o outputfile, --outputfile outputfile
+       -o outputfile, --outputfile outputfile
                         Output file defaults to scanout.txt
-  -s, --silent          Silent mode only prints public buckets to the console
-  -p, --perftest        takes the first 50 entries in the wordlist and
+      -s, --silent          Silent mode only prints public buckets to the console
+       -p, --perftest        takes the first 50 entries in the wordlist and
                         calculates the anticipated time for completion then
                         extrapolates this to provide estimate for processing
                         entire list
-  -c concurrentthreads, --concurrentthreads concurrentthreads
+        -c concurrentthreads, --concurrentthreads concurrentthreads
                         specific the number of concurrent threads, use with
                         caution
 
