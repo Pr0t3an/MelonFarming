@@ -104,4 +104,57 @@ def s3_scan(silent, bucket, perftest, outputfile):
 
 
 if __name__ == "__main__":
+    
+        print(r"""
+
+                                `..--:::::::::::::-....`
+                `-/+oyhdmNNMNNNmmmmmddddddmmmmmNNNMMMMNNNmdhyyso/:-`
+          ./oydNMNmdhysso+++oosssyyyhhhhhhhhhhhhhhhdhhhdddmmmmNNMMMMNmhs+-`
+     ./sdNMmdhso+osyhddmNNMNNNmmmddmmddhhdddddhhddmmdmmmmNNMMMMMMMMMMMMMMMMmy/.
+   +mMNdysoshdmmmmddhhhyysyssssssssssssssssssssssssssssssssssyyhhhdmmNMMMMNdmNMd+.
+  .NMMms+hNMMNdddhhhhyyysyssssssssssssssssssssssssssssssyyyysssyyyhhhdmNMMd+++omMN-
+   :NMMMNyooydNNMMMMMMMMMMNNNNmNmdmmmddddddhhhhhhhddddddmmdNmNNMMMMMMNNmmo++++ohMM+
+    `sMMMMMNdyso+++ooossssyyyyhhhhhhdddddddddddddddddhhhhhyyysssoo+++++++oshdNMMNo
+      :MMMMMMMMMMNmmdhhyyyssoo++/++++++++++++++++++++++++++++++++ossyhdmNMMMMms:
+       +MhosydmNMMMMMMMMMMMMMMMMNmmhdddhhyhyhhhyhhyhyhhdhdmmmNNMMMNNmdhhysNM-
+        hN:-+ydmmNmdsooyyyhddmmmmmmmmNNmmmmmmmmdhhhhyyysso+++//:---------/Md
+        /MhdMMMMNhmMMo---------------------------------------------------dM/
+        `NMMMMMMMNssMM+-------------------------------------------------+MN`      YABS - Yet Another Bucket Scanner  V0.1
+         hMMMMy+dMN+dMN:------------------------------------------------mMs
+         /MMMMhmMMN+hMMs-----------------------------------------------+MM-
+         `mMMMMMMMsoNMMs-----------------------------------------------mMd            Multi-threaded S3 Bucket finder
+         .dMsdMMMNdMMMm:----------------------------------------------+MM/
+        .mMy+NMMMMMMmy:-----------------------------------------------dMN`
+       `mMd+dMMhso/:-------------------------------------------------/MMs
+       hMN+yMMM:-----------------------------------------------------dMM-
+      /MMosMMMm-----------------------------------------------------/MMd
+     `mMyoMMMMm-----------------------------------------------------hMM/
+     +MdoNMNdMN----------------------------------------------------:NMN`
+    `NN+NMM++MM:---------------------------------------------------yMMs
+    yMydMMd :MMs--------------------------------------------------:NMM.
+   +MmsMMM. `MMm--------------------------------------------------yMMd
+   NMyNMMy   mMM+-------------------------------------:syyo------:NMM/
+  -MNsMMM-   sMMm------------------------------------sMMMMMs-----yMMN`
+  oMddMMN`   :MMMo----------------------------------yMMmNNMds/--/MMMs
+  dMyhMMd     dMMN---------------------------------:MMMhyyhdNMNydMMM-
+ `MMsoMMm     /MMMy--------------------------------:NMMNmddhydNMMMMd
+ `MMs+dMM`     yMMM/--------------------------------:ymMMMMMMmhhNMM/
+ `NMy++hMh:-:sdNMMMd------------------------------------/ohNMMNhhdNd-
+  sMMy++smMMMMMMMMMM/---------------------------------------sMMNhhymN/
+   oNMMmdhdNMMMMMMMMd----------------------------------------dMMmhyhMN-
+    .+hNMMMMMMNdhsNMM/---------------------------------------hMMMhhyNMd
+        `.--``    :NMMNdys+/:-------------------------------sMMMMdhydMM-                     `-::.
+                   :NMMMMMMMMMNmddhyysssooooo++++++++ooooydMMMsoMNhhdMMy      `.-.`       .odNNNNMo
+                    -ohmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo `MdyhyNMN:/oydNMNNMMmo    :NNhyydmMs
+                        `.:+osyhdmmmNMMMMMmmmmmmmmmmNmmmdyo:` .hMdyhhhdNMMMmy+/::+yMN   `NMMMMMMMd.
+                                       `.               `-/oymMMMdyhyyhhyNMMMNmNMMMm:    .......`
+                                             ./o+/-`  `oNMNNmmddhyhyhhyhhNMMNdhsss/`
+                                           /dNmmMMMo `dMmhhyhhdddhhhhyyhhhhhddmdmmNNh/
+                                          oMNhdNMh-  .MMNNMMMMMMMNyhhyhhhhyyyhhhhhhymMm.
+                                          smNmho.     ./+o+/:--mNhyhyhdhhyhhmNMMMMNmmMM-
+                                                             `mNyyhymMMNmdhyhNMMMddddh:
+                                                             :MMmdmms+sdMMMNNNMMd`
+                                                              .oyhs`    `:+sso+:`
+
+    """)
     main()
