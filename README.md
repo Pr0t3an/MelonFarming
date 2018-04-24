@@ -59,3 +59,22 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
                         specific the number of concurrent threads, use with
                         caution
 
+----------------------------------
+<b>reactivatedtony.py</b> Generate VT Yara rule based on AV detection name
+
+usage: reactivatedtony.py [-h] -r rulename -o outputfile -s destiredsig [-n]
+                          -v AVVENDOR
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r rulename, --rulename rulename
+                        Name of Rule (no spaces use underscore)
+  -o outputfile, --outputfile outputfile
+                        Output Directory of Yara file
+  -s destiredsig, --sig destiredsig
+                        Signature
+  -n, --newfile         Only Look for New Files submitted/analysed
+  -v AVVENDOR, --avvendor AVVENDOR
+                        Single av vendor kaspersky, mcafee, etc
+                        
+   e.g.  python reactivatedtony.py -o ~/Downloads/ -s 54354353453 -r mdos_5345345345 -v kaspersky -n
