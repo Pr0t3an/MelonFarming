@@ -85,15 +85,15 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
  <b> greplin.py</b>  Finds string match in Apache Access Log Directory, Parses Matches and Outputs JSON file.
  
  
- usage: greplin.py [-h] -i INPUTDIR -s SEARCHSTRING -o OUTPUTDIR
+      usage: greplin.py [-h] -i INPUTDIR -s SEARCHSTRING -o OUTPUTDIR
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -i INPUTDIR, --inputdir INPUTDIR
+      optional arguments:
+            -h, --help            show this help message and exit
+            -i INPUTDIR, --inputdir INPUTDIR
                         InputDirectory
-  -s SEARCHSTRING, --searchstring SEARCHSTRING
+            -s SEARCHSTRING, --searchstring SEARCHSTRING
                         Search String
-  -o OUTPUTDIR, --outputdir OUTPUTDIR
+            -o OUTPUTDIR, --outputdir OUTPUTDIR
                         JSON Output Dir + Name
                         
                         
