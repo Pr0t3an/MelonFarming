@@ -78,3 +78,22 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
                         Single av vendor kaspersky, mcafee, etc
                         
       e.g.  python reactivatedtony.py -o ~/Downloads/ -s 54354353453 -r mdos_5345345345 -v kaspersky -n
+      
+      
+ -----------------------------------
+ 
+ <b> greplin.py</b>  Finds string match in Apache Access Log Directory, Parses Matches and Outputs JSON file.
+ 
+ 
+ usage: greplin.py [-h] -i INPUTDIR -s SEARCHSTRING -o OUTPUTDIR
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUTDIR, --inputdir INPUTDIR
+                        InputDirectory
+  -s SEARCHSTRING, --searchstring SEARCHSTRING
+                        Search String
+  -o OUTPUTDIR, --outputdir OUTPUTDIR
+                        JSON Output Dir + Name
+                        
+                        
