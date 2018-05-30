@@ -96,4 +96,6 @@ Best intentions of somewhat maintaining some scripts to do some specific actions
             -o OUTPUTDIR, --outputdir OUTPUTDIR
                         JSON Output Dir + Name
                         
-                        
+----------------------------------------
+
+<b>dirtyAF.py</b> ASCII encodes and generates Macro for Shell Command Execution.  It sucks but filled a gap
