@@ -1,0 +1,70 @@
+import re
+import base64
+import sys
+
+
+
+def runner(encodedstring):
+    # Remove whitespaces
+    string2=re.sub(' +', ' ', encodedstring)
+
+    try:
+        #
+        base64string=string2.split("ENCOD ",1)[1]
+    except:
+        base64string=string2
+
+
+
+    decodedbase64=base64.b64decode(base64string).decode('UTF-16')
+
+    #charstoremove = "()\'\\`+"
+    #table = str.maketrans("","",charstoremove)
+    #updatedstring = decodedbase64.translate(table)
+    updatedstring=decodedbase64
+    updatedstring=updatedstring.replace(";","; \n")
+    updatedstring=updatedstring.lower()
+    updatedstring=re.sub(' +', ' ', updatedstring)
+    #print(updatedstring)
+
+    l=updatedstring.split('$')
+    domainlist=max(l, key=len)
+
+    charstoremove = "()\'\\`+"
+    table = str.maketrans("","",charstoremove)
+    domainlist = domainlist.translate(table)
+
+    domainlist=domainlist.split('=')
+    domainlist=domainlist[1]
+
+    m = re.search('(.*?):', domainlist)
+    replacestring=str(m.group(1))
+    domainlist=domainlist.replace(replacestring,"\n")
+    domainlist=domainlist.split("\n")
+    tidylist= []
+    for domain in domainlist:
+        new_string = domain.replace("s://","")
+        new_string = new_string.replace("://","")
+        try:
+            new_string = new_string.split("/",1)[0]
+            if "[" in new_string:
+                test=1
+            else:
+                if new_string=="":
+                    test=1
+                else:
+                    tidylist.append(new_string)
+        except:
+            print("")
+    print("\n\n")
+    print(*tidylist, sep='\n')
+    print("\n\n")
+def main(argv):
+ 
+    encodedstring=sys.argv[1]
+    runner(encodedstring)
+
+
+
+if __name__ == "__main__":
+   main(sys.argv)
