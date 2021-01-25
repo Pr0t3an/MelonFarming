@@ -14,7 +14,11 @@ def runner(encodedstring):
     except:
         base64string=string2
 
-
+    try:
+        #
+        base64string=string2.split("enc ",1)[1]
+    except:
+        base64string=string2
 
     decodedbase64=base64.b64decode(base64string).decode('UTF-16')
 
