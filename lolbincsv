@@ -1,0 +1,49 @@
+import os
+import yaml
+import glob
+import csv
+import itertools
+
+
+lolbinyamlpath = "/Users/path/Desktop/lolbins/*.yml"
+f=[]
+ymldict={}
+f=glob.glob(lolbinyamlpath)
+templist=[]
+newtemplist=[]
+x = 0
+
+for i in f:
+    with open(i) as file:
+        full_list=list(yaml.load_all(file, Loader=yaml.FullLoader))
+        ymldict[i] = full_list[0]
+for key in ymldict:
+    name = ymldict[key]['Name']
+    description = ymldict[key]['Description']
+    try:
+        resources = ymldict[key]['Resources']
+    except:
+        resources="n/a"
+    try:
+        path = ymldict[key]['Full_Path']
+    except:
+        path = "n/a"
+
+    templist=ymldict[key]['Commands']
+    for i in templist:
+        x+=1
+        category = i['Category']
+        catdesc = i['Description']
+        catcommand = i['Command']
+        id = x
+        newlist = [name, description,resources, path, category, catdesc, catcommand]
+        masterdictlist = {'number': x, 'name' : name, 'description' : description, 'resources' : resources, 'path' : path, 'category' : category, 'catdesc': catdesc, 'catcommand': catcommand}
+        newtemplist.append(masterdictlist)
+
+#print(newtemplist[0]['name'])
+
+keys = newtemplist[0].keys()
+with open('/Users/path/Desktop/lolbins/last.csv', 'w') as output_file:
+    dict_writer = csv.DictWriter(output_file, keys)
+    dict_writer.writeheader()
+    dict_writer.writerows(newtemplist)
